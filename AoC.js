@@ -10,6 +10,8 @@ const inputPath = `./inputs/${year}/day${day}.txt`;
 const solution = require(solutionPath);
 const input = fs.readFileSync(inputPath, {encoding:"utf8", flag:"r"});
 
+console.time("execution time");
 const {part1, part2} = solution(input);
+console.timeEnd("execution time");
 console.log("part1:", part1);
 console.log("part2:", part2);
